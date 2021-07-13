@@ -4,8 +4,40 @@
   grid-template-columns: 20% repeat(2, 30%) 20%;
   grid-template-rows: repeat(5, auto);
 
+  /* Atajo */
+
   grid-template: repeat(5, auto) / 20% repeat(2, 30%) 20%;  /* grid-template: rows / columns */
+}
 
+.grid-explicit .item:nth-child(10) {
+  color: red;
 
-  gap: 1Vh 1Vw;                                             /* gap: row | column */
+  grid-row-start: 2;
+  grid-row-end: 3;
+  grid-column-start: 2;
+  grid-column-end: 3;
+
+  /* Atajo */
+
+  grid-row: 2 / 3;                                          /*  grid-row: start / end */
+  grid-column: 3 / 5;                                       /*  grid-column: start / end */
+
+  /* ShortCut */
+
+  grid-area: 2 / 3 / 3 / 5;                                 /* grid-area: grid-row-start / grid-row-end / grid-column-start / grid-column-end */
+}
+
+.grid-explicit .item:nth-child(12) {
+  color: cyan;
+
+  /* Span = abarca*/
+
+  grid-row: span 2;
+  grid-column: span 3;
+}
+
+.grid-explicit .item:nth-child(15) {
+  color: darkorange;
+  grid-row: 1 / span 2;                                      /* grid-row: grid line donde empieza / abarca 2 espacios o celdas */
+  grid-column: 1 / span 2;                                   /* grid-row: grid line donde empieza / abarca 2 espacios o celdas */
 }
