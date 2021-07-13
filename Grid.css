@@ -1,0 +1,11 @@
+.grid-explicit {
+  display: grid;
+
+  grid-template-columns: 20% repeat(2, 30%) 20%;
+  grid-template-rows: repeat(5, auto);
+
+  grid-template: repeat(5, auto) / 20% repeat(2, 30%) 20%;  /* grid-template: rows / columns */
+
+
+  gap: 1Vh 1Vw;                                             /* gap: row | column */
+}
