@@ -92,3 +92,15 @@
 .footer{
   grid-area: footer;
 }
+
+
+
+/* Grid Implícita. Grids de bloque y de línea */
+
+.grid-implicit {
+  width: 40%;
+  display: grid;
+  display: inline-grid;                     /* ocupa todo el espacio que ocupa su contenido, pero no es posible agregar un widht o un widht e igualmanera un padding o margor en su top o bottom */
+
+  grid-template: repeat(3, 200px) / repeat(4, 1fr);
+}
