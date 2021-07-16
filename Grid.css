@@ -64,3 +64,31 @@
 
   /* Con grid-area no funciona hacer esta Grid-line-names */
 }
+
+
+
+/* Posicionamiento con Grid Areas */
+
+
+.grid-areas {
+  display: grid;
+  grid-template:100px repeat(2, 1fr) 60px / 1fr 200px;
+  grid-template-areas:
+    "header header"
+    "content sidebar"
+    "content ."
+    "footer footer";
+}
+
+.header{
+  grid-area: header;
+}
+.content{
+  grid-area: content;
+}
+.sidebar{
+  grid-area: sidebar;
+}
+.footer{
+  grid-area: footer;
+}
