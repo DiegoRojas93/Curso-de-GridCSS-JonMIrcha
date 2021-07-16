@@ -1,3 +1,6 @@
+/* grid-explicit */
+
+
 .grid-explicit {
   display: grid;
 
@@ -40,4 +43,24 @@
   color: darkorange;
   grid-row: 1 / span 2;                                      /* grid-row: grid line donde empieza / abarca 2 espacios o celdas */
   grid-column: 1 / span 2;                                   /* grid-row: grid line donde empieza / abarca 2 espacios o celdas */
+}
+
+
+
+/* Posicionamiento con nombres de Grid Lines */
+
+
+.grid-line-names {
+  display: grid;
+  grid-template: repeat(3, 1fr) /repeat (3, 1fr);
+  grid-template-rows: [line-r1] 1fr [line-r2] 1fr [line-r3] 1fr [line-r4];
+  grid-template-columns: [line-c1] 1fr [line-c2] 1fr [line-c3] 1fr [line-c4];
+}
+
+.grid-line-names .item:nth-child(3) {
+  color: cyan;
+  grid-row: line-r3 / line-r4;
+  grid-column: line-c1 / line-c4;
+
+  /* Con grid-area no funciona hacer esta Grid-line-names */
 }
