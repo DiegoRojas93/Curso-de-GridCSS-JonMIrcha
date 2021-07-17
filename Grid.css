@@ -118,6 +118,35 @@
   grid-auto-rows: 80px 100px;        /* Expecifica el tamaño que tendra los items sobrantes en su height */
 
   grid-auto-flow: column;            /* Da la direccion del flujo de los items en colundo con flujo de a la derecha */
-  grid-auto-columns: 80px 100px;      /* Expecifica el tamaño que tendra los items sobrantes en su widht */
+  grid-auto-columns: 80px 100px;     /* Expecifica el tamaño que tendra los items sobrantes en su widht */
 
+}
+
+
+/* Flujo denso de la grid */
+
+
+.grid-flow-dense {
+  display: grid;
+  grid-template: repeat(4, 1fr) / repeat(5, 1fr);
+  grid-auto-flow: row dense;        /* Dense: rellena los espacios que se hacen cuando un item ocupa mas espacio que pude ocupar dontro del numero de rows que ha de manera explicita en la grid*/
+}
+
+.grid-flow-dense .item:nth-child(9) {
+  color: red;
+  grid-row: span 3;
+  grid-column: span 3;
+}
+
+
+.grid-flow-dense1 {
+  display: grid;
+  grid-template: repeat(4, 1fr) / repeat(5, 1fr);
+  grid-auto-flow: column dense;     /* Dense: rellena los espacios que se hacen cuando un item ocupa mas espacio que pude ocupar dontro del numero de columns que ha de manera explicita en la grid */
+}
+
+.grid-flow-dense1 .item:nth-child(9) {
+  color: red;
+  grid-row: span 3;
+  grid-column: span 3;
 }
