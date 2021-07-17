@@ -217,3 +217,47 @@
 .grid-order_1 .item:nth-child(5) {
   order: -1;
 }
+
+
+/* Alineación de Grid Items */
+
+
+
+.grid-align {
+  display: grid;
+  grid-template: repeat(2, 200px) / repeat(3, 200px);
+
+  /* justify-items: alinea el contenido (en este calo las etiquetas p) en el main axis (eje x), su valor por defecto es stretch */
+  /* stretch (ocupa todo el espacio del item) | start | center | end */
+  justify-items: center;
+
+
+  /* justify-items: alinea el contenido (en este calo las etiquetas p) en el cross axis (eje y), su valor por defecto es stretch */
+  /* stretch (ocupa todo el espacio del item) | start | center | end | flex-start | flex-end */
+
+  align-items: center;
+}
+
+.grid-align .item:nth-child(2) {
+
+  /* justify-self: alinea el item en especifico en el main axis*/
+  /* align-self: alinea el item en especifico en el cross axis*/
+
+  /* stretch (ocupa todo el espacio del item) | start | center | end | flex-start | flex-end */
+
+  justify-self: start;
+  align-self: start;
+}
+
+.grid-align .item:nth-child(4) {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-self: start;
+  align-self: start;
+}
+
+
+/* Alineación de Grid Tracks */
+
+
+
