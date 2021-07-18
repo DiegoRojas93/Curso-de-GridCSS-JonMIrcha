@@ -273,6 +273,7 @@
 /* Tamaños Máximos y Mínimos de Grid Tracks */
 
 
+
 .grid-min-max {
   display: grid;
 
@@ -288,4 +289,29 @@
   grid-template-columns: repeat(4, minmax(max-content, 200px));/*Adaptate hasta el manimo contenido(toma el ancho de la etiqueta p)*/
   grid-template-columns: repeat(4, minmax(200px, max-content));/*Adaptate hasta el maximo contenido(toma el ancho de la etiqueta p)*/
   grid-template-columns: repeat(4, minmax(min-content, max-content)); /* Minimo seria asta el ancho de la letra más grande y Maximo toma el ancho de la etiqueta p */
+}
+
+
+/* Grids con Patrones Repetitivos */
+
+
+
+.grid-repeat {
+  display: grid;
+
+  /* Patron repetitivo en columna en una grid explicita*/
+
+  grid-template-columns: repeat(4, 10% 20% 30% 50%);  /* Repite 4 veces este patron hacla la derecha */
+  grid-template-columns: repeat(3, 10% 20% 30% 50%);  /* Repite 3 veces este patron hacla la derecha */
+  grid-template-columns: repeat(2, 10% 20% 30% 50%);  /* Repite 2 veces este patron hacla la derecha */
+  grid-template-columns: repeat(1, 10% 20% 30% 50%);  /* Repite 1 veces este patron hacla la derecha */
+
+  /* Patron repetitivo en filas en una grid explicita*/
+
+  grid-template-rows: repeat(2, 100px 200px);         /* Repite 2 veces este patron hacla la derecha */
+
+
+  /* Patron repetitivo en columna en una grid implicita*/
+
+  grid-auto-rows: 100px 200px;
 }
