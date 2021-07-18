@@ -315,3 +315,24 @@
 
   grid-auto-rows: 100px 200px;
 }
+
+
+/* Grids Dinámicas */
+
+
+.grid-dynamics {
+  display: grid;
+  grid-template-columns: repeat(4, 100px);
+
+  /*auto-fill: Rellena la grid con espacios para se puedan agragarse más tracks de forma dinamica,cuando nosotros creamos mas items en HTML*/
+  grid-template-columns: repeat(auto-fill, 100px);
+
+  /*auto-fill: el tamaño de la grid dependera de cuantos items halla */
+  grid-template-columns: repeat(auto-fit, 100px);
+
+  /*auto-fill con minmax: crea una funcion como flex-wrap, pero si hay pocos items en la grid (la grid no esta llena), dicha funcion funcionara cuando empieze a afectar al primer item que encuente el tamaño limite de pantalla*/
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+
+  /*auto-fill con minmax: crea una funcion como flex-wrap, pero si hay pocos items en la grid, dichos items podran crecer de hasta alcanzar el tamaño de la grid*/
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
