@@ -336,3 +336,14 @@
   /*auto-fill con minmax: crea una funcion como flex-wrap, pero si hay pocos items en la grid, dichos items podran crecer de hasta alcanzar el tamaño de la grid*/
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 }
+
+
+/* Responsive sin Media Queries */
+
+
+
+.grid-responsive {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
