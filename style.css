@@ -58,3 +58,9 @@ img {
   background-color: #666;
   border: medium solid #999;
 }
+
+.sub-item {
+  padding: 1rem;
+  background-color: #ddd;
+  border: medium solid #ccc;
+}

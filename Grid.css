@@ -347,3 +347,13 @@
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1rem;
 }
+
+
+/* Grids Anidadas */
+
+
+
+.grid-nested {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr)
+}
