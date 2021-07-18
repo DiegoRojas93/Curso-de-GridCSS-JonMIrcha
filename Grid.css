@@ -268,3 +268,24 @@
   justify-content: space-evenly;           /* Alinea los tracks en el main axis: start | center | end | space-between | space-around | space-evenly*/
   align-content: space-evenly;    /* Alinea los tracks en el cross axis: start | center | end | space-between | space-around | space-evenly*/
 }
+
+
+/* Tamaños Máximos y Mínimos de Grid Tracks */
+
+
+.grid-min-max {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(4, minmax(100px, 200px));/* Esteblece el minimo y maximo de ancho o alto (si es columna o fila) de un item */
+
+  /* min-content: El ancho minimo de la track dependera del ancho minimo del contenido. Si se pone texto, el ancho sera el ancho de la pálabra más grande */
+
+  /* max-content: El ancho maximo de la track dependera del ancho maximo del contenido. En un texto, el maximoa ancho seria de todo el texto que tenga la etiqueta p */
+
+  grid-template-columns: repeat(4, minmax(min-content, 200px));
+  grid-template-columns: repeat(4, minmax(200px, min-content));/*Adaptate hasta el manimo contenido(hasta el ancho de la letra más grande)*/
+  grid-template-columns: repeat(4, minmax(max-content, 200px));/*Adaptate hasta el manimo contenido(toma el ancho de la etiqueta p)*/
+  grid-template-columns: repeat(4, minmax(200px, max-content));/*Adaptate hasta el maximo contenido(toma el ancho de la etiqueta p)*/
+  grid-template-columns: repeat(4, minmax(min-content, max-content)); /* Minimo seria asta el ancho de la letra más grande y Maximo toma el ancho de la etiqueta p */
+}
